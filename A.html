@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<!--
+	欢迎体验HBuilder，最快的web编码工具。
+	烈马是需要驯服的，玩不转HBuilder，你快不了。
+	按照lessson1.txt的指导敲击键盘，你会发现HBuilder的神奇所在。
+	你可以用任何其他工具敲这段代码，至少比HBuilder慢5倍!
+	写几十行代码，来一场无鼠标编程之旅，看看who is e。
+	Are you ready?
+	小贴士：可以把lesson1.txt拖到右边或下边，实现分窗格并排浏览。
+	在注释后的第12行开始敲下lesson1里的按键。
+-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<style type="dj/css">
+			.cities { background-color:black; color:white; margin:20px; padding:20px; }
+		</style>
+	</head>
+
+	<body>
+		<h1>header 1</h1>
+		<p>A paragraph.</p>
+		<p>
+			<!-超链接->
+			<a href="/index.html">本文本</a> 是一个指向本网站中的一个页面的链接。</p>
+
+		<p>
+			<a href="http://www.microsoft.com/">本文本</a> 是一个指向万维网上的页面的链接。</p>
+
+		<p>
+			您也可以使用图像来作链接：
+			<a href="/example/html/lastpage.html">
+				<img border="0" src="/i/eg_buttonnext.gif" />
+			</a>
+		</p>
+
+		<a href="http://www.w3school.com.cn/" target="_blank">Visit W3School!</a>
+
+		<p>如果把链接的 target 属性设置为 "_blank"，该链接会在新窗口中打开。</p>
+
+		<a href="http://www.w3school.com.cn/html/html_links.asp#tips">有用的提示</a>
+
+		<!-图片 在浏览器无法载入图像时，alt 替换文本属性告诉读者她们失去的信息。此时，浏览器将显示这个替代性的文本而不是图像->
+		<img src="boat.gif" alt="Big Boat">
+		<h1>我的<span class="red">重要的</span>标题</h1>
+
+		<div class="cities">
+			<h2>London</h2>
+
+			<p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+
+			<p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+		</div>
+
+		<div class="cities">
+			<h2>Paris</h2>
+
+			<p>Paris is the capital and most populous city of France.</p>
+
+			<p>Situated on the Seine River, it is at the heart of the 蝜e-de-France region, also known as the r間ion parisienne.</p>
+
+			<p>Within its metropolitan area is one of the largest population centers in Europe, with over 12 million inhabitants.</p>
+		</div>
+
+		<div class="cities">
+			<h2>Tokyo</h2>
+
+			<p>Tokyo is the capital of Japan, the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p>
+
+			<p>It is the seat of the Japanese government and the Imperial Palace, and the home of the Japanese Imperial Family.</p>
+
+			<p>The Tokyo prefecture is part of the world's most populous metropolitan area with 38 million people and the world's largest urban economy.</p>
+		</div>
+
+	</body>
+
+</html>
+
+<!--
+这里是最终敲完的正确代码，可用于比对
+<html>
+	<head>
+		<title></title>
+		<meta charset="UTF-8"/>
+		<script src="test.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function WhoisE () {
+				var e;
+				e = document.getElementsByClassName("classA");
+				e = document.getElementsByTagName("div");
+				e = document.getElementById("d1");
+				e.setAttribute("align","center");
+				e.setAttribute("data-test","2");
+				e.style.fontFamily="微软雅黑";
+				e.style.backgroundImage="url(img/HBuilder.png)";
+				e.style.cssText="background-image: url(img/HBuilder.png);";
+				switch (e.style.display){
+					case "-webkit-box":
+						break;
+					default:
+						break;
+				}
+				if (e.getAttribute("class")!="classA") {
+					e.className="classA";
+				}
+				e.innerHTML="<font color='#CCCCCC'></font>";
+				e = document.getElementById("a1");
+				e.href="#a1";
+				e.target="_blank";
+				e = new Image();
+				e.src="img/HBuilder.png";
+				e = window.indexedDB || window.webkitIndexedDB || window.msIndexedDB || window.mozIndexedDB;
+				if (typeof(e)!="undefined") {
+					e.open("test");
+				}
+				var head = document.getElementsByTagName("head")[0];
+				with (head){
+					var l = lastElementChild;
+					removeChild(l);
+				}
+				e = document.createElement("link");
+				e.rel="stylesheet";
+				e.type="text/css";
+				e.href="test.css";
+				head.appendChild(e);
+				var ss="e is ";
+				if (e.getAttribute("data-test")==null) {
+					ss=ss+e.outerHTML;
+				} else{
+					ss=ss+"unknow";
+				}
+				alert(ss)
+			}
+			addEventListener("DOMContentLoaded",function () {
+				finishLesson(1)
+			})
+		</script>
+		<style type="text/css">
+			body{
+				text-align: center;
+				-webkit-user-select: none;
+			}
+			input[type=button]{
+				width: 90px;
+			}
+			ul{display: none}
+			#d1{
+				font-family: "微软雅黑";
+				background-image: url(img/HBuilder.png)
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="test.css"/>
+	</head>
+	<body>
+		<img src="img/HBuilder.png"/>
+		<br />
+		<div id="d1" class="classA" data-test = "1"></div>
+		<a href="#a1" id="a1"></a>
+		<ul>
+			<li></li>
+		</ul>
+		<nav>&nbsp;</nav>
+		<input type="button" name="" id="" value="who is e" onclick="WhoisE()" />
+	</body>
+</html>
+-->

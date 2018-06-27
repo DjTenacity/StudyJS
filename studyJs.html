@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>ssss</title>
+		
+		
+	</head>
+	<!--无论如何包含代码,只要不存在defer 和async属性,浏览区都会按照<script>元素在页面中出现的先后顺序对他们依次进行解析-->
+	<!--只有第一个解析完成后才会依次类推-->
+	<body>
+ 		<!--惯例会把 JavaScript和CSS文件 放在head中,可是这样意味着必须等到全部JavaScript代码都被下载解析和执行完成以后,才能开始呈现页面的内容 -->
+		<!--浏览器在遇到<body>标签时才开始呈现内容  ,对于那些需要JS代码的页面来说,浏览器在呈现页面时出现明显的延迟,-- 一片空白</body> -->
+		<script type="text/javascript">
+			function sayScript(){
+				alert("使用 Script> 的方式有两种;直接在页面嵌入JavaScript代码和包含外部JavaScript文件")
+				//带有src属性的<script>元素不应该在其标签之间再包含额外的JS代码.
+				//如果包含了嵌入的代码,则只会下载并执行外部脚本文件,嵌入的代码会被忽略
+			}
+		</script>
+		<!--defer 表名脚本在执行时不会影响页面的构造.也就是脚本会被延迟到整个页面都解析完毕后再运行
+		也就是告诉浏览器立即下载,延迟执行  , defer只使用与外部脚本文件.-->
+		
+		<!--async 用于改变处理脚本的行为 ,,只适用于外部脚本文件,并告诉浏览器立即下载文件,但是与defer不同,不保证顺序-->
+		<script type="text/javascript" defer="defer" src="new_file.js"></script>
+		
+	</body>
+</html>
